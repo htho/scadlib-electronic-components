@@ -13,6 +13,10 @@
  * To view a copy of this license, visit
  * http://creativecommons.org/licenses/by-sa/4.0/.
  * @license-link: http://creativecommons.org/licenses/by-sa/4.0/
+ *
+ * @source https://github.com/sparkfun/Pro_Micro
+ * @source https://github.com/sparkfun/Pro_Micro/blob/master/Hardware/Pro_Micro.brd
+ * @fritzing https://github.com/htho/fritzing-parts/tree/master/sparkfun-promicro
  */
 
 /**
@@ -34,10 +38,9 @@
  *
  * @source https://github.com/sparkfun/Pro_Micro
  * @source https://github.com/sparkfun/Pro_Micro/blob/master/Hardware/Pro_Micro.brd
- * @fritzing none/mystery
+ * @fritzing https://github.com/htho/fritzing-parts/tree/master/sparkfun-promicro
  *
  * @todo: get good data for pcb_height
- * @todo: testing
  * 
  * @param: distanceFromPCB if mounted on a pcb it is probably
  * connected using a connector. This is the distance from the top of the
@@ -80,7 +83,11 @@ module pro_micro_lq(distanceFromPCB=0)
  * @tag-list: fzz2scad-compatible, pro micro, sparkfun, ATmega32U4, leonardo, lq
  * @category-list: electronic_components, modules, arduino_compatible, sparkfun
  * @note: fzz2scad-compatible, see https://github.com/htho/fzz2scad
- * 
+ *
+ * @source https://github.com/sparkfun/Pro_Micro
+ * @source https://github.com/sparkfun/Pro_Micro/blob/master/Hardware/Pro_Micro.brd
+ * @fritzing https://github.com/htho/fritzing-parts/tree/master/sparkfun-promicro
+ *  
  * @author: Hauke Thorenz <htho@thorenz.net>
  * @version: 0.1
  * @license-short: cc-by-sa-4.0
@@ -94,7 +101,6 @@ module pro_micro_lq(distanceFromPCB=0)
  * @source https://github.com/sparkfun/Pro_Micro/blob/master/Hardware/Pro_Micro.brd
  * 
  * @todo: get good data for pcb_height
- * @todo: testing
  *
  * @param: distanceFromPCB if mounted on a pcb it is probably
  * connected using a connector. This is the distance from the top of the
