@@ -271,8 +271,7 @@ module JTP_1130M_hq(){proto_JTP_1130_hq(6.00, 3.40);}
  *
  * This is this standard and cheap four pin pushbutton.
  *
- * @note For Fritzing make sure, that pin0 is aligned to the grid. As the
- * other pins are stretched
+ * @fritzing https://github.com/htho/fritzing-parts/tree/master/core-pushbutton-stretched
  * 
  * @uri: https://github.com/htho/fzz2scad-lib/lib/electronic_components/electromechanical/switches/switches/SPST/JTP_1130.scad
  * @tag-list: SPST, pushbutton, tactile switch, 4 pins, proto, hq, fzz2scad-compatible
