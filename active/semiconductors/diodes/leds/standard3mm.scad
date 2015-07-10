@@ -35,7 +35,7 @@
  *
  * @datasheet: https://cdn-reichelt.de/documents/datenblatt/A500/LED_3MM_GE.pdf
  * @fritzing: https://github.com/fritzing/fritzing-parts/blob/master/svg/core/pcb/3mm_LED.svg
- * 
+ *
  * @variable-dependency: commonLegDiameter
  * @variable-dependency: commonLegLength
  *
@@ -95,6 +95,7 @@ module led3mm_hq(distanceFromPCB=0)
  * @source: https://cdn-reichelt.de/documents/datenblatt/A500/LED_3MM_GE.pdf
  * @source: https://github.com/fritzing/fritzing-parts/blob/master/svg/core/pcb/3mm_LED.svg
  *
+ * @variable-dependency: tolerance
  * @param: drillDepth The depth of the drill for this part.
  * @param: distanceFromPCB Sometimes the LED does not touch the pcb.
  */
@@ -106,7 +107,7 @@ module led3mm_do(drillDepth, distanceFromPCB=0)
   translate([0,0,distanceFromPCB]) //moving according to distanceFromPCB
   rotate([0,0,90]){ //rotating it so the flat edge is on the "upper" side (2D) which is the "back" side in 3D
     translate([-(rm/2),0,0]){ //Translating so the center is on connector0
-      cylinder(h=drillDepth, d=dCyl); //create the object.
+      cylinder(h=drillDepth, d=dCyl+tolerance); //create the object.
     }
   }
 }

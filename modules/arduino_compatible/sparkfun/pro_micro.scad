@@ -102,6 +102,8 @@ module pro_micro_lq(distanceFromPCB=0)
  * 
  * @todo: get good data for pcb_height
  *
+ * @variable-dependency: tolerance
+ * 
  * @param: distanceFromPCB if mounted on a pcb it is probably
  * connected using a connector. This is the distance from the top of the
  * pcb to the bottom of this part. (=height of the connector)
@@ -131,7 +133,7 @@ module pro_micro_do(drillDepth, distanceFromPCB=0)
 
  rotate([0,0,0]){ //rotating it so the orientation fits the Fritzing part
     translate([connector0_x, connector0_y,distanceFromPCB]){ //Translating so the center is on connector0
-      translate([usb_pos_x,usb_pos_y+drillDepth/2,usb_pos_z]) translate([usb_center_x,usb_center_y,distanceFromPCB]) cube([usb_width, drillDepth, usb_height], true); //Drill
+      translate([usb_pos_x,usb_pos_y+drillDepth/2,usb_pos_z]) translate([usb_center_x,usb_center_y,distanceFromPCB]) cube([usb_width+tolerance, drillDepth, usb_height+tolerance], true); //Drill
     }
   }
 }

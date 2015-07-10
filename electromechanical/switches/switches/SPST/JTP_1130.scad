@@ -437,7 +437,7 @@ module JTP_1130M_hq_stretched(){proto_JTP_1130_hq_stretched(6.00, 3.40);}
  * @uri: https://github.com/htho/fzz2scad-lib/lib/electronic_components/electromechanical/switches/switches/SPST/JTP_1130.scad
  *
  * @param: drillDepth The depth of the drill for this part.
- * 
+ * @variable-dependency: tolerance
  * @param legDistanceFromPartCenterX The distance of the legs from the center in x orientation.
  * @param legDistanceFromPartCenterX The distance of the legs from the center in y orientation.
  */
@@ -453,7 +453,7 @@ module proto_JTP_1130_do_distanceindipendent(legDistanceFromPartCenterX, legDist
 
   rotate([0,0,0]){ //rotating it so the orientation fits the Fritzing part 
     translate([-legDistanceFromPartCenterX,legDistanceFromPartCenterY,0]){ //Translating so the center is on connector0
-      translate([0,0,]) cylinder(h=drillDepth, d=3.5); //moving part
+      translate([0,0,]) cylinder(h=drillDepth, d=3.5+tolerance); //moving part
     }
   }
 }

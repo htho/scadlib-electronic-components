@@ -140,6 +140,8 @@ module ESP10XX_lq()
  * @manufacturer EXCEL CELL ELECTRONIC
  * @manufacturer-product ESP10XX
  *
+ * @variable-dependency: tolerance
+ * 
  * @param: drillDepth The depth of the drill for this part.
  */
 module ESP10XX_do(drillDepth){
@@ -148,7 +150,7 @@ module ESP10XX_do(drillDepth){
   depthSocket=2.5;  
   rotate([0,0,-90]){ //rotating it so the orientation fits the Fritzing part 
     translate([rm,0,0]){ //Translating so the center is on connector0
-      translate([0,0,drillDepth/2]) cube([widthSocket, depthSocket, drillDepth], true); //body
+      translate([0,0,drillDepth/2]) cube([widthSocket+tolerance, depthSocket+tolerance, drillDepth], true); //body
     }
   }
 }
